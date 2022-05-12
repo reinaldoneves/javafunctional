@@ -1,5 +1,6 @@
 package br.com.javafunctional.functionalinterface;
 
+import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
 /***
@@ -12,16 +13,25 @@ public class _Consumer {
     public static void main(String[] args) {
 
         //Greeting with plain old Java Function
-        Customer customer = new Customer("John",
+        Customer customer = new Customer("John Frusciante",
                 "123456789");
         greetCustomer(customer);
 
         // Consumer Functional Interface
-        greetCostumerConsumer.accept(customer);
+        greetCustumerConsumer.accept(customer);
+
+        // BiConsumer Functional Interface
+        greetCustumerConsumerV2.accept(customer, false);
 
     }
 
-    static Consumer<Customer> greetCostumerConsumer =
+    static BiConsumer<Customer, Boolean> greetCustumerConsumerV2 =
+            (customer, showPhoneNumber) ->
+                    System.out.println("Hello " + customer.customerName +
+                    ", thank you for registering your phone number: "
+                    + (showPhoneNumber? customer.customerPhoneNumber: "******"));
+
+    static Consumer<Customer> greetCustumerConsumer =
             customer -> System.out.println("Hello " + customer.customerName +
                     ", thank you for registering your phone number: "
                     + customer.customerPhoneNumber);
