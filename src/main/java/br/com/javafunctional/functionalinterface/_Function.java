@@ -44,10 +44,6 @@ public class _Function {
         return (number + 1)*numToMultiplyBy;
     }
 
-    BiFunction<Integer, Integer, Integer> incrementByOneAndMultiplyBiFunction =
-            (numberToIncrementByOne, numberToMultiplyBy) ->
-                    (numberToIncrementByOne + 1)*numberToMultiplyBy;
-
 
     /** Escrevendo de forma declarativa
      * Não precisa ser hardcoded ou implementado literalmente pelo dev.
@@ -60,6 +56,9 @@ public class _Function {
     static Function<Integer, Integer> multiplyBy10Function
             = number -> number * 10;
 
+    static BiFunction<Integer, Integer, Integer> incrementByOneAndMultiplyBiFunction =
+            (numberToIncrementByOne, numberToMultiplyBy) ->
+                    (numberToIncrementByOne + 1)*numberToMultiplyBy;
 
 
 }
