@@ -7,6 +7,7 @@ import java.util.function.Consumer;
  * Assim como as Functions nos ajudam a abstrair implementações, porém com retornos de valores,
  * as Consumers são interfaces funcionais que recebem um argumento e não retornam nenhum valor.
  * Consumer é a mesma coisa que um método void, só que como é uma interface funcional, no paradigm Declarativo.
+ * Continue daqui: https://youtu.be/VRpHdSFWGPs?t=3138
  */
 public class _Consumer {
 
@@ -19,6 +20,7 @@ public class _Consumer {
 
         // Consumer Functional Interface
         greetCustumerConsumer.accept(customer);
+        greetCustumerConsumerV2.accept(customer, true);
 
         // BiConsumer Functional Interface
         greetCustumerConsumerV2.accept(customer, false);
@@ -40,6 +42,12 @@ public class _Consumer {
         System.out.println("Hello " + customer.customerName +
                 ", thank you for registering your phone number: "
                 + customer.customerPhoneNumber);
+    }
+
+    static void greetCustomerV2(Customer customer, boolean showPhoneNumber) {
+        System.out.println("Hello " + customer.customerName +
+                ", thank you for registering your phone number: "
+                + (showPhoneNumber? customer.customerPhoneNumber: "******"));
     }
 
     static class Customer {
