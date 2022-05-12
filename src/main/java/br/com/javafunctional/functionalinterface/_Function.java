@@ -46,7 +46,7 @@ public class _Function {
 
 
     /** Escrevendo de forma declarativa
-     * Não precisa ser hardcoded ou implementado literalmente pelo dev.
+     Não precisa ser hardcoded ou implementado literalmente pelo dev.
      Function<T, R> recebe um parametro T (input) e retorna um parametro R (output)
      Veja como Function generaliza ao máximo o que é um método bem como os parâmetros.
      */
@@ -56,6 +56,9 @@ public class _Function {
     static Function<Integer, Integer> multiplyBy10Function
             = number -> number * 10;
 
+    /**
+     * BiFunction é a mesma coisa que Function, só que aceita 2 parâmetros.
+     */
     static BiFunction<Integer, Integer, Integer> incrementByOneAndMultiplyBiFunction =
             (numberToIncrementByOne, numberToMultiplyBy) ->
                     (numberToIncrementByOne + 1)*numberToMultiplyBy;
