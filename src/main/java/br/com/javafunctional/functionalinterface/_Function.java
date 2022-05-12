@@ -30,6 +30,16 @@ public class _Function {
 
         System.out.println(addBy1AndThenMultiplyBy10.apply(4));
 
+        /***
+         * Usos de BiFunction:
+         */
+        System.out.println(incrementByOneAndMultiply(4, 100));
+
+        /**
+         * A grande questão é, quem implementa? A JVM em runtime? Provavelmente.
+         */
+        System.out.println(incrementByOneAndMultiplyBiFunction.apply(4, 100));
+
     }
 
     /** Escrevendo de forma imperativa
