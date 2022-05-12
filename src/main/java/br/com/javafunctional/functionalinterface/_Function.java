@@ -6,7 +6,7 @@ import java.util.function.Function;
 /**
  * @author Reinaldo
  * Amigos Code study of Java Functional programming
- * https://youtu.be/VRpHdSFWGPs?t=2224
+ * https://youtu.be/VRpHdSFWGPs?t=2594
  */
 public class _Function {
 
@@ -22,8 +22,8 @@ public class _Function {
         System.out.println(multiply);
 
         /** Olha só que pira, dá pra encadear as funções (métodos) e passar um
-         método por parâmetro para outro método, eternamente!
-         É aqui que a SkyNet começa. :c
+         * método por parâmetro para outro método, eternamente!
+         * É aqui que a SkyNet começa. :c
          */
         Function<Integer, Integer> addBy1AndThenMultiplyBy10 =
                 incrementByOneFunction.andThen(multiplyBy10Function);
@@ -43,8 +43,8 @@ public class _Function {
     }
 
     /** Escrevendo de forma imperativa
-     Forma oldschool de codar, em que o dev. precisa implementar a função literalmente, step by step.
-     Nem tudo precisa ser hardcoded ou implementado literalmente pelo dev.
+    * Forma oldschool de codar, em que o dev. precisa implementar a função literalmente, step by step.
+    * Nem tudo precisa ser hardcoded ou implementado literalmente pelo dev.
     */
     static int incrementByOne(int number) {
         return number + 1;
@@ -56,9 +56,9 @@ public class _Function {
 
 
     /** Escrevendo de forma declarativa
-     Não precisa ser hardcoded ou implementado literalmente pelo dev.
-     Function<T, R> recebe um parametro T (input) e retorna um parametro R (output)
-     Veja como Function generaliza ao máximo o que é um método bem como os parâmetros.
+    * Não precisa ser hardcoded ou implementado literalmente pelo dev.
+    * Function<T, R> recebe um parametro T (input) e retorna um parametro R (output)
+    * Veja como Function generaliza ao máximo o que é um método bem como os parâmetros.
      */
     static Function<Integer, Integer> incrementByOneFunction
             = number -> number + 1;
