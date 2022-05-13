@@ -4,7 +4,7 @@ import java.util.function.BiFunction;
 import java.util.function.Function;
 
 /**
- * @author Reinaldo
+ * @author reinaldo_neves@hotmail.com
  * Amigos Code study of Java Functional programming
  * https://youtu.be/VRpHdSFWGPs?t=2594
  */

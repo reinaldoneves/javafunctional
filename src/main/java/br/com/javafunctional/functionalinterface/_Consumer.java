@@ -4,6 +4,8 @@ import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
 /***
+ * @autor reinaldo_neves@hotmail.com
+ *
  * Assim como as Functions nos ajudam a abstrair implementações, porém com retornos de valores,
  * as Consumers são interfaces funcionais que recebem um argumento e não retornam nenhum valor.
  * Consumer é a mesma coisa que um método void, só que como é uma interface funcional, no paradigm Declarativo.
