@@ -1,4 +1,4 @@
-package br.com.javafunctional;
+package br.com.javafunctional.functionalinterface;
 
 public enum Gender {
 

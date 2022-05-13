@@ -1,15 +1,14 @@
 package br.com.javafunctional;
 
+import br.com.javafunctional.functionalinterface.Gender;
 import lombok.ToString;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-import static br.com.javafunctional.Gender.*;
+import static br.com.javafunctional.functionalinterface.Gender.*;
 
 public class Main {
 
