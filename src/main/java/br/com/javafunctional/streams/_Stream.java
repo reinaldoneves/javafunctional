@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.function.Consumer;
 import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
@@ -63,6 +64,29 @@ public class _Stream {
                 .map(person -> person.gender)
                 .collect(Collectors.toSet())
                 .forEach(System.out::println);
+
+
+       //Com variáveis externas (predicate declarado sem lambda)
+        Predicate<Person> personPredicate =
+                person -> FEMALE.equals(person.gender);
+        boolean containsOnlyFemalesv1 =
+                people.stream().allMatch(personPredicate);
+
+        //Verificando na coleção via Stream se há somente mulheres,
+        // com Lambda, Predicates e Function:
+        boolean containsOnlyFemalesv2 = people.stream()
+                .allMatch(person -> FEMALE.equals(person.gender));
+
+        boolean containsAtLeastAFemale = people.stream()
+                .anyMatch(person -> person.gender.equals(FEMALE));
+
+        boolean containsNoneFemale = people.stream()
+                .noneMatch(person -> person.gender.equals(FEMALE));
+
+        System.out.println(containsOnlyFemalesv1);
+        System.out.println(containsOnlyFemalesv2);
+        System.out.println(containsAtLeastAFemale);
+        System.out.println(containsNoneFemale);
 
 //        System.out.println("\nImperative approach");
 //        // Imperative approach
