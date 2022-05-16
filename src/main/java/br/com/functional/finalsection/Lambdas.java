@@ -7,6 +7,10 @@ public class Lambdas {
 
     public static void main(String[] args) {
 
+        Integer number = null;
+        int couter = 0;
+
+
         // Lambdas when you have only one return statement
         Function<String, String> upperCaseName = name -> name.toUpperCase();
         // This is the same as (with method reference):
@@ -18,6 +22,7 @@ public class Lambdas {
             return name.toUpperCase();
         };
 
+        //Lambdas when you have more than one argument
         BiFunction<String, Integer, String> upperCaseName4 =
                 (name, age) -> {
                     if (name.isBlank()) throw new IllegalArgumentException("Name cannot be blank");
