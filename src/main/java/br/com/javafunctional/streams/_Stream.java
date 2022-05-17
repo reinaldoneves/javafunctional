@@ -37,8 +37,8 @@ public class _Stream {
         /***
          * O Stream recebe funções por parâmetro, para que você manipule uma
          * coleção/elemento da coleção ou filtre da maneira que bem entender.
-         * Algumas dessas funções pode ser, por exemplo: Function, Predicate, Supplier, Consumer, etc
-         * É possível passar a lambda diretamente, ou (ver mais abaixo):
+         * Algumas dessas funções podem ser, por exemplo: Function, Predicate, Supplier, Consumer, etc
+         * É possível passar a lambda diretamente, ou (ver mais abaixo) [...]:
          */
         people.stream()
                 .map(person -> person.name)
@@ -46,10 +46,10 @@ public class _Stream {
                 .forEach(System.out::println);
 
         /***
-         * Passar as variáveis com os resultados das funções, que já não foram implementadas,
+         * [...] passar as variáveis com os resultados das funções, que já não foram implementadas,
          * mas apenas declaradas.
          * Perceba como o código fica muito mais legível e enxuto no exemplo de cima.
-         * Perceba ainda que a gente pode usar todas as funções que vimos até aqui:
+         * Perceba ainda que agente pode usar todas as funções que vimos até aqui:
          */
         Function<Person, String> personStringFunction = person -> person.name;
         Collector<String, ?, Set<String>> stringSetCollector = Collectors.toSet();

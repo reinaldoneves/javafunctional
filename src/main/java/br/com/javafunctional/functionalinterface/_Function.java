@@ -21,14 +21,9 @@ public class _Function {
         int multiply = multiplyBy10Function.apply(2);
         System.out.println(multiply);
 
-        /** Olha só que pira, dá pra encadear as funções (métodos) e passar um
-         * método por parâmetro para outro método, eternamente!
-         * É aqui que a SkyNet começa. :c
-         */
-        Function<Integer, Integer> addBy1AndThenMultiplyBy10 =
-                incrementByOneFunction.andThen(multiplyBy10Function);
-
+        // Chamando recursivamente a função
         System.out.println(addBy1AndThenMultiplyBy10.apply(4));
+
 
         /***
          * Usos de BiFunction:
@@ -61,10 +56,18 @@ public class _Function {
     * Veja como Function generaliza ao máximo o que é um método bem como os parâmetros.
      */
     static Function<Integer, Integer> incrementByOneFunction
-            = number -> number + 1;
+            = (number) -> number + 1;
 
     static Function<Integer, Integer> multiplyBy10Function
             = number -> number * 10;
+
+    /** Olha só que pira, dá pra encadear as funções (métodos) e passar um
+     * método por parâmetro para outro método, eternamente!
+     * A diferença entre o método andThen ou o compose é só a ordem das chamadas das funções passadas por parâmetro.
+     * É aqui que a SkyNet começa. :c
+     */
+    static Function<Integer, Integer> addBy1AndThenMultiplyBy10 =
+            incrementByOneFunction.andThen(multiplyBy10Function);
 
     /**
      * BiFunction é a mesma coisa que Function, só que aceita 2 parâmetros.
