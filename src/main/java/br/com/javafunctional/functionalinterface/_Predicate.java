@@ -18,13 +18,14 @@ public class _Predicate {
 
     public static void main(String[] args) {
 
-        System.out.println("\nWith Predicate");
+        System.out.println("\nWithout Predicate");
         System.out.println(isPhoneNumberValid("0700000000"));
         System.out.println(isPhoneNumberValid("07000000001"));
         System.out.println(isPhoneNumberValid("09009877300"));
 
-        System.out.println("\nWithout Predicate");
-        System.out.println(isPhoneNumberValidPredicate.test("0700000000"));
+        System.out.println("\nWith Predicate");
+        boolean test = isPhoneNumberValidPredicate.test("0700000000");
+        System.out.println(test);
         System.out.println(isPhoneNumberValidPredicate.test("07000000001"));
         System.out.println(isPhoneNumberValidPredicate.test("09009877300"));
 
