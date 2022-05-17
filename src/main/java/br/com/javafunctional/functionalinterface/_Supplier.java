@@ -25,6 +25,7 @@ public class _Supplier {
             () -> List.of("jdbc://localhost:3306/character_app",
                     "jdbc://localhost:3306/equipament_app",
                     "jdbc://localhost:3306/map_app",
+                    "jdbc://localhost:3306/skill_app",
                     "jdbc://localhost:3306/battle_system_app",
                     "jdbc://localhost:3306/dialogue_app");
 

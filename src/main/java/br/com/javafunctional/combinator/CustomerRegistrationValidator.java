@@ -6,6 +6,17 @@ import java.util.function.Function;
 import static br.com.javafunctional.combinator.CustomerRegistrationValidator.ValidationResult;
 import static br.com.javafunctional.combinator.CustomerRegistrationValidator.ValidationResult.*;
 
+/***
+ *
+ * @author reinaldo_neves whith the help of my dear friend Nelson from AmigosCode - Salaam Aleikum
+ *
+ * Volidation interface for customer registration.
+ * It extends a Function interface, so it can be used as a function.
+ * The Function extended recieves a {@link Customer} and returns a {@link ValidationResult}.
+ *
+ * This interface can be used has a model for the validation
+ * any tipe of class that your heart feel like need to be validated.
+ */
 public interface CustomerRegistrationValidator
         extends Function<Customer, ValidationResult> {
 
